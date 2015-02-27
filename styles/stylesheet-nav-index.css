@@ -173,7 +173,7 @@
     animation-direction: normal, alternate;
 }
 
-/*--- MAIN OPTIONS---*/
+/*--- Navigation Buttons---*/
 
 [class^="hvr-"] {
     font: bold 16px 'Indie Flower', cursive;
@@ -194,12 +194,14 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/** --- DROPDOWN MENU --- **/
 
 .active>a, .active>p{
-     border: 3px solid #4982fa;
-     color: #4982fa;
+    border-color: #4982fa;
+    color: #4982fa;
 }
+
+
+/** --- DROPDOWN MENU --- **/
 
 body>header>nav>ul>li.dropdown>ul>li>a {
     display: block;
@@ -208,6 +210,7 @@ body>header>nav>ul>li.dropdown>ul>li>a {
 
 body>header>nav>ul>li.dropdown{
     margin: 0;
+    padding: 0;
 }
 
 body>header>nav>ul>li.dropdown>ul>li{

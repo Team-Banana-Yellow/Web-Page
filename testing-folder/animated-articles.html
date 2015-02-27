@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        /* important stuff */
+        #container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: -1;
+            transition: top 0.5s;
+        }
+
+        .subcontent {
+            height: 300px;
+            border: 1px solid #999;
+            padding: 20px;
+        }
+
+        #anchor1:target ~ #content {
+            top: 0px;
+        }
+        #anchor2:target ~ #content {
+            top: -300px;
+        }
+        #anchor3:target ~ #content {
+            top: -600px;
+        }
+
+        /*Styling*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        #navbar {
+            background: #444;
+            color: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .link {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        a.link, a.link:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .anchor {
+            display: none;
+        }
+
+
+
+        a.top {
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div id='container'>
+    <div id='navbar'>
+        <a class="link" href="#anchor1">
+            Anchor 1
+        </a>
+        <a class="link" href="#anchor2">
+            Anchor 2
+        </a>
+        <a class="link" href="#anchor3">
+            Anchor 3
+        </a>
+    </div>
+    <div class="anchor" id="anchor1"></div>
+    <div class="anchor" id="anchor2"></div>
+    <div class="anchor" id="anchor3"></div>
+    <div id="content">
+        <div class="subcontent">
+            <h2> Anchor 1</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis dui elit, in pharetra lorem elementum eget. Suspendisse egestas dui in nisi vulputate, efficitur volutpat tortor vulputate. Cras pulvinar nisl ligula, eleifend aliquam neque vehicula pulvinar. In porttitor ante ac justo elementum tristique. Fusce vel aliquet risus. Etiam eget lacus malesuada, mollis enim sit amet, dignissim arcu. Sed ullamcorper, urna in posuere facilisis, orci sapien maximus neque, ut euismod ex erat eget metus.<br/><br/><br/>
+        </div>
+        <div class="subcontent">
+            <h2> Anchor 2</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis dui elit, in pharetra lorem elementum eget. Suspendisse egestas dui in nisi vulputate, efficitur volutpat tortor vulputate. Cras pulvinar nisl ligula, eleifend aliquam neque vehicula pulvinar. In porttitor ante ac justo elementum tristique. Fusce vel aliquet risus. Etiam eget lacus malesuada, mollis enim sit amet, dignissim arcu. Sed ullamcorper, urna in posuere facilisis, orci sapien maximus neque, ut euismod ex erat eget metus.<br/><br/><br/>
+            <a class="top" href="#anchor1">Top</a>
+        </div>
+        <div class="subcontent">
+            <h2> Anchor 3</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis dui elit, in pharetra lorem elementum eget. Suspendisse egestas dui in nisi vulputate, efficitur volutpat tortor vulputate. Cras pulvinar nisl ligula, eleifend aliquam neque vehicula pulvinar. In porttitor ante ac justo elementum tristique. Fusce vel aliquet risus. Etiam eget lacus malesuada, mollis enim sit amet, dignissim arcu. Sed ullamcorper, urna in posuere facilisis, orci sapien maximus neque, ut euismod ex erat eget metus.<br/><br/><br/>
+            <a class="top" href="#anchor1">Top</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
