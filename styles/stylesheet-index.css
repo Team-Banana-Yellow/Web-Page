@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../images/banana-vector.jpg");
+}
+
+    body>header{
+        margin: auto;
+        height: 360px;
+        text-align: center;
+        background-color: rgba(253, 245, 12, 0.5);
+    }
+    
+        body>header>#logo-holder{
+            position: relative;
+            margin: auto;
+            width: 980px;
+            background-image: url("../images/header-logo.PNG");
+            height: 335px;
+        }
+
+        body>header>nav{
+            margin: -42px auto;
+        }
+
+            body>header>nav ul{
+                list-style: none;
+
+            }
+
+                body>header>nav>ul>li{
+                    vertical-align: top;
+                    display: inline-block;
+                }
+
+                    body>header>nav>ul>li>a,
+                    body>header>nav>ul>li.dropdown>p{
+                        width: 120px;
+
+                    }
+
+
+
+

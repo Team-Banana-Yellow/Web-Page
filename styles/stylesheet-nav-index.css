@@ -1,0 +1,301 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+/* Bounce To Right */
+.hvr-bounce-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover{
+    color: white;
+    border-color: #656565;
+}
+.hvr-bounce-to-right:hover:before{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+
+/* Bounce To Top */
+.hvr-bounce-to-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-to-top:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fdf50c;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 3s;
+    transition-duration: 3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-bounce-to-top:hover{
+    color: #656565;
+    border-color: #656565;
+}
+.hvr-bounce-to-top:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* Hang */
+@-webkit-keyframes hvr-hang {
+    0% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    50% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@keyframes hvr-hang {
+    0% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    50% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@-webkit-keyframes hvr-hang-sink {
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@keyframes hvr-hang-sink {
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+.hvr-hang {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active,
+.dropdown:hover .hvr-hang, .dropdown:focus .hvr-hang, .dropdown:active .hvr-hang{
+    -webkit-animation-name: hvr-hang-sink, hvr-hang;
+    animation-name: hvr-hang-sink, hvr-hang;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+}
+
+/*--- MAIN OPTIONS---*/
+
+[class^="hvr-"] {
+    font: bold 16px 'Indie Flower', cursive;
+}
+
+[class^="hvr-"] {
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    margin: .4em;
+    padding: 15px;
+    cursor: pointer;
+    background: #e1e1e1;
+    border: 3px solid lightskyblue;
+    border-radius: 5px;
+    text-decoration: none;
+    color: lightskyblue;
+    /* Prevent highlight colour when element is tapped */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/** --- DROPDOWN MENU --- **/
+
+.active>a, .active>p{
+     border: 3px solid #4982fa;
+     color: #4982fa;
+}
+
+body>header>nav>ul>li.dropdown>ul>li>a {
+    display: block;
+    width: 120px;
+}
+
+body>header>nav>ul>li.dropdown{
+    margin: 0;
+}
+
+body>header>nav>ul>li.dropdown>ul>li{
+    margin-top: -70px;
+    opacity: 0;
+    -webkit-transition: opacity 1s, margin-top 2s;
+    -moz-transition: opacity 1s, margin-top 2s;
+    transition: opacity 1s, margin-top 2s;
+}
+
+
+body>header>nav>ul>li.dropdown:hover>ul>li{
+    -webkit-transition: opacity 2.5s, margin-top 2s;
+    -moz-transition: opacity 2.5s, margin-top 2s;
+    transition: opacity 2.5s, margin-top 2s;
+    opacity: 1;
+    margin-top: 0;
+
+}
+
+
+/** DROPDOWN MENU **/
+/*
+@-webkit-keyframes displayWithDelay {
+    0% { visibility: hidden }
+    95% { visibility: hidden }
+    100% { display: block; visibility: visible }
+}
+
+@-webkit-keyframes drop1 {0%{opacity:.1; margin-top: -30px;}100%{opacity:1;margin-top: 0px;}}
+
+body>header>nav>ul>li.dropdown>ul>li{
+    display: none;
+    visibility: hidden;
+}
+
+
+
+body>header>nav>ul>li.dropdown:hover>ul>li[class="1"],
+body>header>nav>ul>li.dropdown:active>ul>li[class="1"],
+body>header>nav>ul>li.dropdown:focus>ul>li[class="1"] {
+    -webkit-animation-name: displayWithDelay;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 0.4s;
+    visibility: visible;
+    display: block;
+}
+
+body>header>nav>ul>li.dropdown:hover>ul>li[class="2"],
+body>header>nav>ul>li.dropdown:active>ul>li[class="2"],
+body>header>nav>ul>li.dropdown:focus>ul>li[class="2"] {
+    -webkit-animation-name: displayWithDelay;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration:0.8s;
+    visibility: visible;
+    display: block;
+}
+
+body>header>nav>ul>li.dropdown:hover>ul>li[class="3"],
+body>header>nav>ul>li.dropdown:active>ul>li[class="3"],
+body>header>nav>ul>li.dropdown:focus>ul>li[class="3"] {
+    -webkit-animation-name: displayWithDelay;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 1.2s;
+    visibility: visible;
+    display: block;
+}
+
+/** --- KEY FRAME TEST
+
+*{
+    box-sizing: border-box;
+    -webkit-animation-name: borderAnime;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+}
+
+@-webkit-keyframes borderAnime {
+    0% { border: 3px solid lightskyblue; padding: 15px; }
+    10% { border: 4px solid lightskyblue; padding: 14px; }
+    20% { border: 5px solid lightskyblue; padding: 13px; }
+    30% { border: 6px solid lightskyblue; padding: 12px; }
+    40% { border: 7px solid lightskyblue; padding: 11px; }
+    50% { border: 8px solid lightskyblue; padding: 10px; }
+    60% { border: 7px solid lightskyblue; padding: 11px; }
+    70% { border: 6px solid lightskyblue; padding: 12px; }
+    80% { border: 5px solid lightskyblue; padding: 13px; }
+    90% { border: 4px solid lightskyblue; padding: 14px; }
+    100% { border: 3px solid lightskyblue; padding: 15px; }
+}
+--- **/
